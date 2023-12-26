@@ -1,4 +1,4 @@
-# Mittin
+# FastApi Project
 
 Backend project for events API created with FastAPI, SQLAlchemy, SQLModel and Postgres
 
