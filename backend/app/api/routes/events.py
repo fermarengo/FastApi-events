@@ -73,22 +73,3 @@ def upload_image(
     data = {'picture_url': file_name }
     event = crud.event.update(db, db_obj=db_obj, obj_in=data)
     return event
-
-
-# @router.put("/", response_model=schemas.EventResponse)
-# def update_event(
-#     event_external_id: UUID,
-#     event_data: schemas.EventCreate = Depends(),
-#     db: Session = Depends(get_db),
-# ) -> Any:
-#     """
-#     Update existing event.
-#     """
-#     db_obj = crud.event.get(db, model_external_id=event_external_id)
-#     if not db_obj:
-#         raise HTTPException(
-#             status_code=status.HTTP_404_NOT_FOUND,
-#             detail="The event with this ID does not exist in the system.",
-#         )
-#     event = crud.event.update(db, db_obj=db_obj, obj_in=event_data)
-#     return event
